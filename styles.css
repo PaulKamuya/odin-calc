@@ -55,3 +55,7 @@ button[id]{
 #clear-btn, #equal-btn{
   grid-column: span 2;
 }
+
+.del-icon{
+  height: 1.2rem;
+}
