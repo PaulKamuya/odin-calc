@@ -35,4 +35,5 @@
 
 #clear-btn{
   grid-column: span 2;
+  font-size: 0.2rem;
 }
