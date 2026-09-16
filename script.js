@@ -57,7 +57,7 @@ function operate(prevNum, operator, currNum){
       sub(prevNum,currNum)
     break;
 
-    case '*':
+    case 'x':
       multiply(prevNum,currNum)
     break;
 
@@ -66,3 +66,9 @@ function operate(prevNum, operator, currNum){
     break;
   }
 }
+
+const divideBtn = document.querySelector('#divide-btn')
+
+divideBtn.addEventListener('click', () => {
+  console.log(textContent)
+})
