@@ -61,14 +61,8 @@ function operate(prevNum, operator, currNum){
       multiply(prevNum,currNum)
     break;
 
-    case '/':
+    case '÷':
       divide(prevNum,currNum)
     break;
   }
 }
-
-const divideBtn = document.querySelector('#divide-btn')
-
-divideBtn.addEventListener('click', () => {
-  console.log(textContent)
-})
