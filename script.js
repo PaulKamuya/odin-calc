@@ -1,6 +1,10 @@
 const display = document.querySelector('#display')
 const btn = document.querySelector('button')
 
+let firstNumber = ''
+let operator = ''
+let secondNumber = ''
+
 btn.addEventListener('click', () => {
   display.value += btn.textContent
 })
@@ -25,7 +29,3 @@ const divide = (a,b) => {
   return a / b
 }
 
-add(5, 6) // 11
-sub(10, 9) // 1
-multiply(1, 7) // 7
-divide (10, 10) // 1
