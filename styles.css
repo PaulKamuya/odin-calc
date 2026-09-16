@@ -5,35 +5,53 @@
 }
 
 .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: black;
+
   border: 1px solid;
-  width: 300px;
+  width: 20rem;
+  height: 30rem;
   padding: 0.2rem;
+  margin: 1rem;
 }
 
 #display{
-  font-size: 1.2rem;
-  padding: 0.2em 0.5em;
+  background-color: transparent;
+  color: white;
   margin: 0.2em 0;
   width: 100%;
-  font-size: 1rem;
+  height: 8rem;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: right;
+  border: none;
 }
 
-.button-grid{
+.btn-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.2rem 0.1rem;
+  height: 100%;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+button{
+  border: none;
+}
+
+button[id]{
+  background-color: rgb(207, 0, 0);
 }
 
 .btn{
   font-size: 1rem;
-  padding: 0.2em 0.2em;
+  background-color: black;
+  color: white;
 }
 
-#equal-btn{
+#clear-btn, #equal-btn{
   grid-column: span 2;
-}
-
-#clear-btn{
-  grid-column: span 2;
-  font-size: 0.2rem;
 }
