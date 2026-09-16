@@ -1,13 +1,9 @@
 const display = document.querySelector('#display')
-const btn = document.querySelector('button')
 
 let firstNum = '' 
 let operator = ''
 let secondNum = ''
 
-btn.addEventListener('click', () => {
-  display.value += btn.textContent
-})
 
 const add = function (a,b) {
   a = +a 
