@@ -59,3 +59,21 @@ button[id]{
 .del-icon{
   height: 1.2rem;
 }
+
+.btn:hover{
+  background-color: grey;
+}
+
+.btn:active{
+  background-color: black;
+}
+
+button[id]:hover{
+  background-color: rgb(247, 94, 94);
+}
+
+button[id]:active{
+  background-color: rgb(207, 0, 0);
+}
+
+
