@@ -46,13 +46,17 @@ button[id]{
   background-color: rgb(207, 0, 0);
 }
 
-.btn{
+button{
   font-size: 1rem;
   background-color: black;
   color: white;
 }
 
-#clear-btn, #equal-btn{
+#del-btn{
+  grid-column: span 3;
+}
+
+#equal-btn{
   grid-column: span 2;
 }
 
