@@ -35,3 +35,26 @@ function  divide(a, b){
   return a / b
 }
 
+function operate(a, operator, b){
+  a = firstNum
+  b = secNum
+  operator = symbol
+
+  switch(operator){
+    case '+':
+      addNums(a, b)
+    break;
+    
+    case '-':
+      minus(a, b)
+    break;
+
+    case '*':
+      multiply(a, b)
+    break;
+
+    case '÷':
+      divide(a, b)
+    break;
+  }
+}
