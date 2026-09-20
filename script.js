@@ -58,3 +58,7 @@ function operate(a, operator, b){
     break;
   }
 }
+
+function updateDisplay(){
+  display.value = `${firstNum} ${symbol} ${secNum}`
+}
