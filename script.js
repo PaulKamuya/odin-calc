@@ -17,6 +17,7 @@ function  minus(a, b){
 }
 
 function  multiply(a, b){
+  console.log(a * b)
   return a * b
 }
 
@@ -51,7 +52,7 @@ function operate(a, operator, b){
 }
 
 function updateDisplay(value){
-  if (value){
+  if (value || value === 0){
     display.value = value
   } else {
     display.value = `${firstNum}${symbol}${secNum}`
@@ -77,10 +78,11 @@ btn.forEach(button => {
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
     if (operator.id === 'equal-btn'){
-      if (!display.value) console.log('empty')
-      if (!symbol) console.log('no symbol')
-      if (!secNum) console.log('no second')
-      operate(firstNum, symbol, secNum)
+      if (!display.value || !symbol || !secNum){ 
+        resetVaribles() 
+      } else {
+        operate(firstNum, symbol, secNum)
+      }
 
     } else if (operator.id === 'del-btn'){
       resetVaribles()
