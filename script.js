@@ -2,6 +2,10 @@ const display = document.querySelector('#display')
 const btn = document.querySelectorAll('.btn')
 const operatorsBtn = document.querySelectorAll('[id]')
 
+let firstNum = ''
+let secNum = ''
+let symbol = ''
+
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
     if (operator.id === 'equal-btn'){
@@ -30,3 +34,4 @@ function  multiply(a, b){
 function  divide(a, b){
   return a / b
 }
+
