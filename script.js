@@ -68,9 +68,14 @@ btn.forEach(button => {
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
     if (operator.id === 'equal-btn'){
-      console.log('equals')
+      if (!display.value) console.log('empty')
+      if (!symbol) console.log('no symbol')
+      if (!secNum) console.log('no second')
+      operate(firstNum, symbol, secNum)
+
     } else if (operator.id === 'del-btn'){
-      console.log('delete/clear')
+      display.value = ''
+
     } else {
       symbol += operator.textContent
       updateDisplay()
