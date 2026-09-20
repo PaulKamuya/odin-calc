@@ -27,9 +27,7 @@ function  multiply(a, b){
 }
 
 function  divide(a, b){
-  console.log(a / b)
-
-  return a / b
+  return (a === 0 || b === 0) ? 'Syntax Error' : a / b
 }
 
 function operate(a, operator, b){
@@ -70,6 +68,9 @@ function updateDisplay(value){
 
 btn.forEach(button => {
   button.addEventListener('click', () => {
+    if (display.value === '' && button.textContent === '.'){
+      firstNum = '0'
+    }
     if (!symbol){
       firstNum += button.textContent
       updateDisplay()
