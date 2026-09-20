@@ -9,24 +9,35 @@ let symbol = ''
 
 
 function  addNums(a, b){
+  console.log(a + b)
+
   return a + b
 }
 
 function  minus(a, b){
+  console.log(a - b)
+
   return a - b
 }
 
 function  multiply(a, b){
+  console.log(a * b)
+
   return a * b
 }
 
 function  divide(a, b){
+  console.log(a / b)
+
   return a / b
 }
 
 function operate(a, operator, b){
-  a = firstNum
-  b = secNum
+
+  display.value = ''
+
+  a = +firstNum
+  b = +secNum
   operator = symbol
 
   switch(operator){
@@ -74,7 +85,10 @@ operatorsBtn.forEach(operator => {
       operate(firstNum, symbol, secNum)
 
     } else if (operator.id === 'del-btn'){
-      display.value = ''
+      firstNum = ''
+      secNum = ''
+      symbol = ''
+      updateDisplay()
 
     } else {
       symbol += operator.textContent
