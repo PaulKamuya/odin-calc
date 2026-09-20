@@ -5,6 +5,7 @@ const operatorsBtn = document.querySelectorAll('[id]')
 let firstNum = ''
 let secNum = ''
 let symbol = ''
+let ans; 
 
 
 
@@ -64,37 +65,34 @@ btn.forEach(button => {
     if (display.value === '' && button.textContent === '.'){
       firstNum = '0'
     }
-    if (!symbol){
+    if (!symbol && !firstNum){
       firstNum += button.textContent
-      updateDisplay()
 
     } else {
       secNum += button.textContent
-      updateDisplay()
     }
+    updateDisplay()
   })
 })
 
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
+    if (operator.id === 'del-btn'){
+      resetVaribles()
+
+    } else {
+      if (!symbol) {
+        symbol += operator.textContent
+      }
+    }
+    updateDisplay()
+
     if (operator.id === 'equal-btn'){
       if (!display.value || !symbol || !secNum){ 
         resetVaribles() 
       } else {
         operate(firstNum, symbol, secNum)
       }
-
-    } else if (operator.id === 'del-btn'){
-      resetVaribles()
-      updateDisplay()
-
-    } else {
-      if (symbol) {
-        symbol = operator.textContent
-      } else {
-        symbol += operator.textContent
-      }
-      updateDisplay()
     }
   })
 })
