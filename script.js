@@ -17,7 +17,6 @@ function  minus(a, b){
 }
 
 function  multiply(a, b){
-  console.log(a * b)
   return a * b
 }
 
@@ -30,25 +29,29 @@ function operate(a, operator, b){
   a = +firstNum
   b = +secNum
   operator = symbol
+  let ans;
 
   switch(operator){
     case '+':
-      updateDisplay(addNums(a, b))
+      ans = addNums(a, b)
     break;
     
     case '-':
-      updateDisplay(minus(a, b))
+      ans = minus(a, b)
     break;
 
     case 'x':
-      updateDisplay(multiply(a, b))
+      ans = multiply(a, b)
     break;
 
     case '÷':
-      updateDisplay(divide(a, b))
+      ans = divide(a, b)
     break;
   }
+  updateDisplay(ans)
   resetVaribles()
+  console.log(ans)
+  return ans
 }
 
 function updateDisplay(value){
@@ -87,10 +90,18 @@ operatorsBtn.forEach(operator => {
       }
 
     } else { 
+
       if (operator.id === 'del-btn'){
-      resetVaribles()
+        resetVaribles()
+        updateDisplay()
+
       }else {
         if (!symbol && firstNum && operator.id !== '=') {
+          symbol += operator.textContent
+
+        } else if (symbol && firstNum && secNum) {
+          firstNum = operate(firstNum, symbol, secNum)
+          secNum = '' 
           symbol += operator.textContent
         }
         updateDisplay()
