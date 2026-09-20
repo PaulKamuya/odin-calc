@@ -48,6 +48,7 @@ function operate(a, operator, b){
       ans = divide(a, b)
     break;
   }
+  
   updateDisplay(ans)
   resetVaribles()
   return ans
@@ -63,10 +64,15 @@ function updateDisplay(value){
 
 btn.forEach(button => {
   button.addEventListener('click', () => {
+    
     if (display.value === '' && button.textContent === '.'){
-      firstNum = '0'
+      firstNum += '0'
     }
+
     if (symbol){
+      if (secNum === '' && button.textContent === '.'){
+        secNum += '0'
+      }
       secNum += button.textContent
 
     } else {
@@ -79,6 +85,8 @@ btn.forEach(button => {
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
 
+    if (!firstNum) return
+
     if (operator.id === 'equal-btn'){
 
       if (!display.value || !symbol || !secNum){ 
@@ -87,6 +95,7 @@ operatorsBtn.forEach(operator => {
       } else {
         operate(firstNum, symbol, secNum)
       }
+      //throw in function ^^
 
     } else { 
 
@@ -112,6 +121,3 @@ function resetVaribles(){
   secNum = ''
   symbol = ''
 }
-
-console.log(`first number ${firstNum}`)
-console.log(`second number: ${secNum}`)
