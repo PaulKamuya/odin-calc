@@ -5,7 +5,6 @@ const operatorsBtn = document.querySelectorAll('[id]')
 let firstNum = ''
 let secNum = ''
 let symbol = ''
-let ans; 
 
 
 
@@ -91,13 +90,12 @@ operatorsBtn.forEach(operator => {
       if (operator.id === 'del-btn'){
       resetVaribles()
       }else {
-      if (!symbol && firstNum && operator.id !== '=') {
-        symbol += operator.textContent
+        if (!symbol && firstNum && operator.id !== '=') {
+          symbol += operator.textContent
+        }
+        updateDisplay()
       }
-      updateDisplay()
     }
-  }
-    
   })
 })
 
