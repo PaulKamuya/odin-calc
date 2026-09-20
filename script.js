@@ -50,7 +50,6 @@ function operate(a, operator, b){
   }
   updateDisplay(ans)
   resetVaribles()
-  console.log(ans)
   return ans
 }
 
@@ -96,14 +95,7 @@ operatorsBtn.forEach(operator => {
         updateDisplay()
 
       }else {
-        if (!symbol && firstNum && operator.id !== '=') {
-          symbol += operator.textContent
-
-        } else if (symbol && firstNum && secNum) {
-          firstNum = operate(firstNum, symbol, secNum)
-          secNum = '' 
-          symbol += operator.textContent
-        }
+        symbol += operator.textContent
         updateDisplay()
       }
     }
