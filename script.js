@@ -9,20 +9,14 @@ let symbol = ''
 
 
 function  addNums(a, b){
-  console.log(a + b)
-
   return a + b
 }
 
 function  minus(a, b){
-  console.log(a - b)
-
   return a - b
 }
 
 function  multiply(a, b){
-  console.log(a * b)
-
   return a * b
 }
 
