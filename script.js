@@ -92,8 +92,13 @@ operatorsBtn.forEach(operator => {
     } else if (operator.id === 'del-btn'){
       resetVaribles()
       updateDisplay()
+
     } else {
-      symbol += operator.textContent
+      if (symbol) {
+        symbol = operator.textContent
+      } else {
+        symbol += operator.textContent
+      }
       updateDisplay()
     }
   })
