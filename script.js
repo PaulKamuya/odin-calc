@@ -57,6 +57,7 @@ function operate(a, operator, b){
       updateDisplay(divide(a, b))
     break;
   }
+  resetVaribles()
 }
 
 function updateDisplay(value){
@@ -90,6 +91,7 @@ operatorsBtn.forEach(operator => {
 
     } else if (operator.id === 'del-btn'){
       resetVaribles()
+      updateDisplay()
     } else {
       symbol += operator.textContent
       updateDisplay()
