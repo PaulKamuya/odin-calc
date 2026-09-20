@@ -62,8 +62,6 @@ btn.forEach(button => {
       secNum += button.textContent
       updateDisplay()
     }
-    console.log(firstNum)
-    console.log(secNum)
   })
 })
 
@@ -74,7 +72,8 @@ operatorsBtn.forEach(operator => {
     } else if (operator.id === 'del-btn'){
       console.log('delete/clear')
     } else {
-      console.log(operator.textContent)
+      symbol += operator.textContent
+      updateDisplay()
     }
   })
 })
