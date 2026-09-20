@@ -66,11 +66,11 @@ btn.forEach(button => {
     if (display.value === '' && button.textContent === '.'){
       firstNum = '0'
     }
-    if (!symbol || !firstNum){
-      firstNum += button.textContent
+    if (symbol){
+      secNum += button.textContent
 
     } else {
-      secNum += button.textContent
+      firstNum += button.textContent
     }
     updateDisplay()
   })
