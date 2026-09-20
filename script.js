@@ -60,5 +60,20 @@ function operate(a, operator, b){
 }
 
 function updateDisplay(){
-  display.value = `${firstNum} ${symbol} ${secNum}`
+  display.value = `${firstNum}${symbol}${secNum}`
 }
+
+btn.forEach(button => {
+  button.addEventListener('click', () => {
+    if (!symbol){
+      firstNum += button.textContent
+      updateDisplay()
+
+    } else {
+      secNum += button.textContent
+      updateDisplay()
+    }
+    console.log(firstNum)
+    console.log(secNum)
+  })
+})
