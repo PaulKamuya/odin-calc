@@ -60,10 +60,10 @@ function operate(a, operator, b){
 }
 
 function updateDisplay(value){
-  if (!value){
-    display.value = `${firstNum}${symbol}${secNum}`
-  } else {
+  if (value){
     display.value = value
+  } else {
+    display.value = `${firstNum}${symbol}${secNum}`
   }
 }
 
