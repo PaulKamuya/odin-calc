@@ -100,3 +100,9 @@ operatorsBtn.forEach(operator => {
     }
   })
 })
+
+function resetVaribles(){
+  firstNum = ''
+  secNum = ''
+  symbol = ''
+}
