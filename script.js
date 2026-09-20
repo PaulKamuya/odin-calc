@@ -77,23 +77,27 @@ btn.forEach(button => {
 
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
-    if (operator.id === 'del-btn'){
-      resetVaribles()
-
-    } else {
-      if (!symbol) {
-        symbol += operator.textContent
-      }
-    }
-    updateDisplay()
 
     if (operator.id === 'equal-btn'){
+
       if (!display.value || !symbol || !secNum){ 
         resetVaribles() 
+        updateDisplay()
       } else {
         operate(firstNum, symbol, secNum)
       }
+
+    } else { 
+      if (operator.id === 'del-btn'){
+      resetVaribles()
+      }else {
+      if (!symbol && firstNum && operator.id !== '=') {
+        symbol += operator.textContent
+      }
+      updateDisplay()
     }
+  }
+    
   })
 })
 
