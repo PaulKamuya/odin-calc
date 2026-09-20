@@ -42,25 +42,29 @@ function operate(a, operator, b){
 
   switch(operator){
     case '+':
-      addNums(a, b)
+      updateDisplay(addNums(a, b))
     break;
     
     case '-':
-      minus(a, b)
+      updateDisplay(minus(a, b))
     break;
 
     case '*':
-      multiply(a, b)
+      updateDisplay(multiply(a, b))
     break;
 
     case '÷':
-      divide(a, b)
+      updateDisplay(divide(a, b))
     break;
   }
 }
 
-function updateDisplay(){
-  display.value = `${firstNum}${symbol}${secNum}`
+function updateDisplay(value){
+  if (!value){
+    display.value = `${firstNum}${symbol}${secNum}`
+  } else {
+    display.value = value
+  }
 }
 
 btn.forEach(button => {
