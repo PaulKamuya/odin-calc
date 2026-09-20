@@ -49,7 +49,7 @@ function operate(a, operator, b){
       updateDisplay(minus(a, b))
     break;
 
-    case '*':
+    case 'x':
       updateDisplay(multiply(a, b))
     break;
 
@@ -89,11 +89,7 @@ operatorsBtn.forEach(operator => {
       operate(firstNum, symbol, secNum)
 
     } else if (operator.id === 'del-btn'){
-      firstNum = ''
-      secNum = ''
-      symbol = ''
-      updateDisplay()
-
+      resetVaribles()
     } else {
       symbol += operator.textContent
       updateDisplay()
