@@ -26,8 +26,6 @@ function  divide(a, b){
 
 function operate(a, operator, b){
 
-  display.value = ''
-
   a = +firstNum
   b = +secNum
   operator = symbol
