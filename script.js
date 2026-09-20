@@ -66,7 +66,7 @@ btn.forEach(button => {
     if (display.value === '' && button.textContent === '.'){
       firstNum = '0'
     }
-    if (!symbol && !firstNum){
+    if (!symbol || !firstNum){
       firstNum += button.textContent
 
     } else {
@@ -95,7 +95,12 @@ operatorsBtn.forEach(operator => {
         updateDisplay()
 
       }else {
-        symbol += operator.textContent
+        if (!symbol){
+          symbol += operator.textContent
+        } else if (secNum) {
+          firstNum = operate(firstNum, symbol,secNum)
+          symbol += operator.textContent
+        }
         updateDisplay()
       }
     }
@@ -107,3 +112,6 @@ function resetVaribles(){
   secNum = ''
   symbol = ''
 }
+
+console.log(`first number ${firstNum}`)
+console.log(`second number: ${secNum}`)
