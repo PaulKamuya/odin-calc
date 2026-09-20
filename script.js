@@ -4,6 +4,12 @@ const operatorsBtn = document.querySelectorAll('[id]')
 
 operatorsBtn.forEach(operator => {
   operator.addEventListener('click', () => {
-    console.log(operator.id)
+    if (operator.id === 'equal-btn'){
+      console.log('equals')
+    } else if (operator.id === 'del-btn'){
+      console.log('delete/clear')
+    } else {
+      console.log(operator.textContent)
+    }
   })
 })
