@@ -97,6 +97,22 @@ operatorsBtn.forEach(operator => {
       }
       //throw in function ^^
 
+    }else if (operator.id === 'backspace') {
+
+
+      console.log('clicked')
+      if (display.value){
+        if (secNum){
+          secNum = secNum.slice(0, -1)
+        } else if (symbol){
+          symbol = symbol.slice(0, -1)
+        } else{
+          firstNum = firstNum.slice(0, -1)
+        }
+      }
+      display.value = display.value.slice(0, -1)
+      //throw in a function ^^
+
     } else { 
 
       if (operator.id === 'del-btn'){
