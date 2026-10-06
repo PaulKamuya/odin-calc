@@ -52,8 +52,8 @@ button{
   color: white;
 }
 
-#del-btn{
-  grid-column: span 3;
+#backspace{
+  grid-column: span 2;
 }
 
 #equal-btn{
