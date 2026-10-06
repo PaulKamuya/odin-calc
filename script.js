@@ -89,6 +89,7 @@ operatorsBtn.forEach(operator => {
 
     if (operator.id === 'equal-btn'){
 
+      //throw in function vv
       if (!display.value || !symbol || !secNum){ 
         resetVaribles() 
         updateDisplay()
@@ -99,8 +100,7 @@ operatorsBtn.forEach(operator => {
 
     }else if (operator.id === 'backspace') {
 
-
-      console.log('clicked')
+      // throw in function vv
       if (display.value){
         if (secNum){
           secNum = secNum.slice(0, -1)
