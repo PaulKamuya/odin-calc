@@ -89,18 +89,15 @@ operatorsBtn.forEach(operator => {
 
     if (operator.id === 'equal-btn'){
 
-      //throw in function vv
       if (!display.value || !symbol || !secNum){ 
         resetVaribles() 
         updateDisplay()
       } else {
         operate(firstNum, symbol, secNum)
       }
-      //throw in function ^^
 
     }else if (operator.id === 'backspace') {
 
-      // throw in function vv
       if (display.value){
         if (secNum){
           secNum = secNum.slice(0, -1)
@@ -111,9 +108,8 @@ operatorsBtn.forEach(operator => {
         }
       }
       display.value = display.value.slice(0, -1)
-      //throw in a function ^^
 
-    } else { 
+    }else { 
 
       if (operator.id === 'del-btn'){
         resetVaribles()
